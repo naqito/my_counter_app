@@ -1,10 +1,10 @@
-actor {
+actor Counter {
 
-  var counter : Nat = 0;
+  stable var value = 0;
 
   public func inc() : async Nat {
-    counter += 1;
-    return counter;
+    value += 3;
+    return value;
   };
 
   public query func getCount() : async Nat {
